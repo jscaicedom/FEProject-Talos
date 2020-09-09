@@ -509,6 +509,12 @@ body {
   .iconred .behance-use {
     color: white; }
 
+.slide-ocult {
+  display: none; }
+
+.slide-visible {
+  display: flex; }
+
 @keyframes imagechange {
   0% {
     background: url("resources/home-bg-2.jpg") center/cover no-repeat border-box; }

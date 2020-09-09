@@ -12,45 +12,46 @@ function open_mobile_menu() {
 // Testimonial Slider Mobile
 
 var slideDT = document.querySelectorAll('.slide-desk-tab')
-var slideMobile = document.querySelectorAll('.testimonial-box')
 var circlesDT = document.querySelector('.circles.desk-tab')
+var dotDT = circlesDT.querySelectorAll('.point')
+
+var slideMobile = document.querySelectorAll('.testimonial-box')
 var circlesMobile = document.querySelector('.circles.mobile')
+var dotM = circlesMobile.querySelectorAll('.point')
+
+var styles = ['mySlides', 'fade']
 
 function changeSlides(max_width) {
   if (max_width.matches) {
-    slideDT.forEach((element) => {
-      element.classList.remove('mySlides')
-      element.classList.remove('fade')
-    })
-    var dotDT = circlesDT.querySelectorAll('.point')
-    dotDT.forEach((element) => {
-      element.classList.remove('dot')
-    })
-    slideMobile.forEach((element) => {
-      element.classList.add('mySlides')
-      element.classList.add('fade')
-    })
-    var dotM = circlesMobile.querySelectorAll('.point')
-    dotM.forEach((element) => {
-      element.classList.add('dot')
-    })
+    let i
+    for (i = 0; i < slideDT.length; i++) {
+      styles.forEach((element) => {
+        slideDT[i].remove(element)
+      })
+      dotDT[i].remove('dot')
+    }
+    let j
+    for (j = 0; j < slideMobile.length; j++) {
+      styles.forEach((element) => {
+        slideMobile[j].add(element)
+      })
+      dotM[i].add('dot')
+    }
   } else {
-    slideDT.forEach((element) => {
-      element.classList.add('mySlides')
-      element.classList.add('fade')
-    })
-    var dotDT = circlesDT.querySelectorAll('.point')
-    dotDT.forEach((element) => {
-      element.classList.add('dot')
-    })
-    slideMobile.forEach((element) => {
-      element.classList.remove('mySlides')
-      element.classList.remove('fade')
-    })
-    var dotM = circlesMobile.querySelectorAll('.point')
-    dotM.forEach((element) => {
-      element.classList.remove('dot')
-    })
+    let i
+    for (i = 0; i < slideDT.length; i++) {
+      styles.forEach((element) => {
+        slideDT[i].add(element)
+      })
+      dotDT[i].add('dot')
+    }
+    let j
+    for (j = 0; j < slideMobile.length; j++) {
+      styles.forEach((element) => {
+        slideMobile[j].remove(element)
+      })
+      dotM[i].remove('dot')
+    }
   }
 }
 
@@ -63,32 +64,41 @@ max_width.addListener(changeSlides)
 var slideIndex = 1
 showSlides(slideIndex)
 
-function currentSlide(n) {
-  showSlides((slideIndex = n))
+function currentSlide(currentIndex) {
+  slideIndex = currentIndex
+  showSlides(slideIndex)
 }
 
-function showSlides(n) {
-  var i
-  var slides = document.getElementsByClassName('mySlides')
-  var dots = document.getElementsByClassName('dot')
-  if (n > slides.length) {
+function showSlides(index) {
+  let i
+  var slides = document.querySelectorAll('.mySlides')
+  var dots = document.querySelectorAll('.dot')
+  if (index > slides.length) {
     slideIndex = 1
   }
-  if (n < 1) {
+  if (index < 1) {
     slideIndex = slides.length
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none'
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(' active', '')
-  }
-  slides[slideIndex - 1].style.display = 'flex'
+  slides.forEach((element) => {
+    element.classList.remove('slide-visible')
+    element.classList.add('slide-ocult')
+  })
+  dots.forEach((element) => {
+    element.className = element.className.replace(' active', '')
+  })
+  slides[slideIndex - 1].classList.remove('slide-ocult')
+  slides[slideIndex - 1].classList.add('slide-visible')
+
   var parent = slides[slideIndex - 1].parentElement
-  parent.style.display = 'flex'
+
+  parent.classList.remove('slide-ocult')
+  parent.classList.add('slide-visible')
+
   var children = slides[slideIndex - 1].querySelectorAll('.testimonial-box')
+
   children.forEach((element) => {
-    element.style.display = 'flex'
+    element.classList.remove('slide-ocult')
+    element.classList.add('slide-visible')
   })
   dots[slideIndex - 1].className += ' active'
 }
@@ -97,19 +107,17 @@ function showSlides(n) {
 
 var selectedQuestions = document.querySelectorAll('.question')
 
-selectedQuestions.forEach((element) => {
-  element.addEventListener('click', function () {
-    CloseAll()
-    var text = this.querySelector('.question-text')
-    if ($(text).is(':visible')) {
-      $(text).slideUp()
-    } else {
-      $(text).slideDown()
-    }
-  })
-})
+function openQuestion(question) {
+  closeAll()
+  var text = question.querySelector('.question-text')
+  if ($(text).is(':visible')) {
+    $(text).slideUp()
+  } else {
+    $(text).slideDown()
+  }
+}
 
-function CloseAll() {
+function closeAll() {
   selectedQuestions.forEach((element) => {
     var text = element.querySelector('.question-text')
     $(text).slideUp()
@@ -123,25 +131,30 @@ var controller = new ScrollMagic.Controller({
   globalSceneOptions: { duration: '100%' },
 })
 
+var sections = [
+  '#home',
+  '#about',
+  '#about-video',
+  '#team',
+  '#portfolio',
+  '#blog',
+  '#contact',
+]
+
+var header_sections = [
+  '#home-button',
+  '#about-button',
+  '#about-video-button',
+  '#team-button',
+  '#portfolio-button',
+  '#blog-button',
+  '#contact-button',
+]
+
 // build scenes
-new ScrollMagic.Scene({ triggerElement: '#home' })
-  .setClassToggle('#home-button', 'active-header') // add class toggle
-  .addTo(controller)
-new ScrollMagic.Scene({ triggerElement: '#about' })
-  .setClassToggle('#about-button', 'active-header') // add class toggle
-  .addTo(controller)
-new ScrollMagic.Scene({ triggerElement: '#about-video' })
-  .setClassToggle('#about-video-button', 'active-header') // add class toggle
-  .addTo(controller)
-new ScrollMagic.Scene({ triggerElement: '#team' })
-  .setClassToggle('#team-button', 'active-header') // add class toggle
-  .addTo(controller)
-new ScrollMagic.Scene({ triggerElement: '#portfolio' })
-  .setClassToggle('#portfolio-button', 'active-header') // add class toggle
-  .addTo(controller)
-new ScrollMagic.Scene({ triggerElement: '#blog' })
-  .setClassToggle('#blog-button', 'active-header') // add class toggle
-  .addTo(controller)
-new ScrollMagic.Scene({ triggerElement: '#contact' })
-  .setClassToggle('#contact-button', 'active-header') // add class toggle
-  .addTo(controller)
+let i
+for (i = 0; i < sections.length; i++) {
+  new ScrollMagic.Scene({ triggerElement: sections[i] })
+    .setClassToggle(header_sections[i], 'active-header') // add class toggle
+    .addTo(controller)
+}
