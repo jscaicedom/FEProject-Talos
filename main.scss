@@ -446,7 +446,7 @@ body {
 }
 
 .container-grid-element-blog:hover {
-  background: url(./resources/hover-image.jpg) center/cover;
+  background: url(resources/hover-image.jpg) center/cover;
   .box-title {
     color: $principal-color;
   }
@@ -655,20 +655,18 @@ body {
 
 @keyframes imagechange {
   0% {
-    background: url('./resources/home-bg-2.jpg') center/cover no-repeat
+    background: url('resources/home-bg-2.jpg') center/cover no-repeat
       border-box;
   }
   40% {
-    background: url('./resources/home-bg-2.jpg') center/cover no-repeat
+    background: url('resources/home-bg-2.jpg') center/cover no-repeat
       border-box;
   }
   60% {
-    background: url('./resources/home-bg.jpg') center/cover no-repeat
-      border-box;
+    background: url('resources/home-bg.jpg') center/cover no-repeat border-box;
   }
   100% {
-    background: url('./resources/home-bg.jpg') center/cover no-repeat
-      border-box;
+    background: url('resources/home-bg.jpg') center/cover no-repeat border-box;
   }
 }
 
