@@ -262,6 +262,11 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     color: rgba(0, 0, 0, 0.603); }
+  .social .be {
+    padding: 0.3rem;
+    background: rgba(0, 0, 0, 0.603); }
+  .social .behance-use {
+    color: rgba(255, 255, 255, 0.76); }
 
 .team-image-container:hover .social {
   opacity: 1; }
