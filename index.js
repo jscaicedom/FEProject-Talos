@@ -1,23 +1,23 @@
 var toggleButton = document.querySelector('.toggle-button')
-var mobileNav = document.querySelector('.nav-mobile')
+var mobileNav = document.querySelector('.header-mobile')
 
-toggleButton.addEventListener('click', function () {
-  var items = mobileNav.querySelector('.main-nav__items')
-  $(mobileNav).slideToggle(500, function () {
+function open_mobile_menu() {
+  var items = mobileNav.querySelector('.header-items')
+  $(mobileNav).slideToggle(500, () => {
     mobileNav.classList.add('open-parent')
     items.classList.add('open')
   })
-})
+}
 
 // Testimonial Slider Mobile
 
 var slideDT = document.querySelectorAll('.slide-desk-tab')
-var slideMobile = document.querySelectorAll('.testimonial__box')
+var slideMobile = document.querySelectorAll('.testimonial-box')
 var circlesDT = document.querySelector('.circles.desk-tab')
 var circlesMobile = document.querySelector('.circles.mobile')
 
-function changeSlides(x) {
-  if (x.matches) {
+function changeSlides(max_width) {
+  if (max_width.matches) {
     slideDT.forEach((element) => {
       element.classList.remove('mySlides')
       element.classList.remove('fade')
@@ -54,18 +54,14 @@ function changeSlides(x) {
   }
 }
 
-var x = window.matchMedia('(max-width: 576px)')
-changeSlides(x)
-x.addListener(changeSlides)
+var max_width = window.matchMedia('(max-width: 576px)')
+changeSlides(max_width)
+max_width.addListener(changeSlides)
 
 // Testimonial Slider
 
 var slideIndex = 1
 showSlides(slideIndex)
-
-function plusSlides(n) {
-  showSlides((slideIndex += n))
-}
 
 function currentSlide(n) {
   showSlides((slideIndex = n))
@@ -90,7 +86,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = 'flex'
   var parent = slides[slideIndex - 1].parentElement
   parent.style.display = 'flex'
-  var children = slides[slideIndex - 1].querySelectorAll('.testimonial__box')
+  var children = slides[slideIndex - 1].querySelectorAll('.testimonial-box')
   children.forEach((element) => {
     element.style.display = 'flex'
   })
@@ -99,7 +95,7 @@ function showSlides(n) {
 
 //Drop down questions
 
-var selectedQuestions = document.querySelectorAll('.section-div__question')
+var selectedQuestions = document.querySelectorAll('.question')
 
 selectedQuestions.forEach((element) => {
   element.addEventListener('click', function () {
@@ -129,23 +125,23 @@ var controller = new ScrollMagic.Controller({
 
 // build scenes
 new ScrollMagic.Scene({ triggerElement: '#home' })
-  .setClassToggle('#home-button', 'active__header') // add class toggle
+  .setClassToggle('#home-button', 'active-header') // add class toggle
   .addTo(controller)
 new ScrollMagic.Scene({ triggerElement: '#about' })
-  .setClassToggle('#about-button', 'active__header') // add class toggle
+  .setClassToggle('#about-button', 'active-header') // add class toggle
   .addTo(controller)
 new ScrollMagic.Scene({ triggerElement: '#about-video' })
-  .setClassToggle('#about-video-button', 'active__header') // add class toggle
+  .setClassToggle('#about-video-button', 'active-header') // add class toggle
   .addTo(controller)
 new ScrollMagic.Scene({ triggerElement: '#team' })
-  .setClassToggle('#team-button', 'active__header') // add class toggle
+  .setClassToggle('#team-button', 'active-header') // add class toggle
   .addTo(controller)
 new ScrollMagic.Scene({ triggerElement: '#portfolio' })
-  .setClassToggle('#portfolio-button', 'active__header') // add class toggle
+  .setClassToggle('#portfolio-button', 'active-header') // add class toggle
   .addTo(controller)
 new ScrollMagic.Scene({ triggerElement: '#blog' })
-  .setClassToggle('#blog-button', 'active__header') // add class toggle
+  .setClassToggle('#blog-button', 'active-header') // add class toggle
   .addTo(controller)
 new ScrollMagic.Scene({ triggerElement: '#contact' })
-  .setClassToggle('#contact-button', 'active__header') // add class toggle
+  .setClassToggle('#contact-button', 'active-header') // add class toggle
   .addTo(controller)
