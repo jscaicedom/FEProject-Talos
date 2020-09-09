@@ -349,7 +349,7 @@ body {
     letter-spacing: 0.05rem; }
 
 .container-grid-element-blog:hover {
-  background: url(resources/hover-image.jpg) center/cover; }
+  background: url(./resources/hover-image.jpg) center/cover; }
   .container-grid-element-blog:hover .box-title {
     color: #68cfb9; }
 
@@ -517,13 +517,13 @@ body {
 
 @keyframes imagechange {
   0% {
-    background: url("resources/home-bg-2.jpg") center/cover no-repeat border-box; }
+    background: url("./resources/home-bg-2.jpg") center/cover no-repeat border-box; }
   40% {
-    background: url("resources/home-bg-2.jpg") center/cover no-repeat border-box; }
+    background: url("./resources/home-bg-2.jpg") center/cover no-repeat border-box; }
   60% {
-    background: url("resources/home-bg.jpg") center/cover no-repeat border-box; }
+    background: url("./resources/home-bg.jpg") center/cover no-repeat border-box; }
   100% {
-    background: url("resources/home-bg.jpg") center/cover no-repeat border-box; } }
+    background: url("./resources/home-bg.jpg") center/cover no-repeat border-box; } }
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
