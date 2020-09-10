@@ -1,7 +1,7 @@
 let toggleButton = document.querySelector('.toggle-button');
 let mobileNav = document.querySelector('.header-mobile');
 
-function open_mobile_menu() {
+function openMobileMenu() {
   let items = mobileNav.querySelector('.header-items');
   $(mobileNav).slideToggle(500, () => {
     mobileNav.classList.add('open-parent');
