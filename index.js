@@ -22,35 +22,35 @@ var dotM = circlesMobile.querySelectorAll('.point');
 var styles = ['mySlides', 'fade'];
 
 function changeSlides(max_width) {
+  let indexDT;
+  let indexM;
   if (max_width.matches) {
-    let i;
-    for (i = 0; i < slideDT.length; i++) {
+    for (indexDT = 0; indexDT < slideDT.length; indexDT++) {
       styles.forEach((element) => {
-        slideDT[i].classList.remove(element);
+        slideDT[indexDT].classList.remove(element);
       });
-      dotDT[i].classList.remove('dot');
+      dotDT[indexDT].classList.remove('dot');
     }
-    let j;
-    for (j = 0; j < slideMobile.length; j++) {
+
+    for (indexM = 0; indexM < slideMobile.length; indexM++) {
       styles.forEach((element) => {
-        slideMobile[j].classList.add(element);
+        slideMobile[indexM].classList.add(element);
       });
-      dotM[i].add('dot');
+      dotM[indexM].add('dot');
     }
   } else {
-    let i;
-    for (i = 0; i < slideDT.length; i++) {
+    for (indexDT = 0; indexDT < slideDT.length; indexDT++) {
       styles.forEach((element) => {
-        slideDT[i].classList.add(element);
+        slideDT[indexDT].classList.add(element);
       });
-      dotDT[i].classList.add('dot');
+      dotDT[indexDT].classList.add('dot');
     }
-    let j;
-    for (j = 0; j < slideMobile.length; j++) {
+
+    for (indexM = 0; indexM < slideMobile.length; indexM++) {
       styles.forEach((element) => {
-        slideMobile[j].classList.remove(element);
+        slideMobile[indexM].classList.remove(element);
       });
-      dotM[i].classList.remove('dot');
+      dotM[indexM].classList.remove('dot');
     }
   }
 }
