@@ -12,9 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"**/*.+(js|md|css|scss|json)\"",
-    "start": "parcel index.html --out-dir docs/ --public-url ./",
-    "build": "parcel build index.html --out-dir docs/ --public-url ./"
+    "format": "prettier --write \"**/*.+(js|md|css|scss|json)\""
   },
   "repository": {
     "type": "git",

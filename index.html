@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FE-Project</title>
@@ -99,7 +99,7 @@
         </li>
       </ul>
     </nav>
-    <section id="about">
+    <section id="about" class="about-section">
       <h1 class="section-title">What we do</h1>
       <p class="section-text">Lorem ipsum dolor sit amet consectetur, adipisecing elit primis mauris.</p>
       <container class="section-container-grid">
@@ -410,7 +410,7 @@
         Lorem ipsum dolor sit amet consectetur adipiscing elit diam, et euismod nascetur
         morbi lobortis laoreet.
       </p>
-      <container id="blog-grid" class="section-container-grid">
+      <container id="blog-grid" class="section-container-grid blog-grid">
         <div class="container-grid-element-blog">
           <div class="container-content">
             <p class="section-blog-date">Online Business / Dec 9, 2016</p>
@@ -512,7 +512,7 @@
         morbi lobortis laoreet.
       </p>
       <container class="testimonial-container">
-        <div class="testimonial-boxes">
+        <div class="testimonial-boxes desk-tab">
           <div class="mySlides fade slide-desk-tab">
             <div class="testimonial-box ">
               <div class="testimonial-image">
@@ -600,12 +600,95 @@
           <span class="dot point" onclick="currentSlide(2)"></span>
           <span class="dot point" onclick="currentSlide(3)"></span>
         </div>
+        <div class="testimonial-boxes mobile">
+          <div>
+            <div class="testimonial-box mySlides fade">
+              <div class="testimonial-image">
+                <img class="image" src="resources/testimonial-img3.jpg" alt="james">
+              </div>
+              <div>
+                <p class="section-text">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                  eros eros libero
+                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                  porta at
+                  vestibulum suspendisse.
+                </p>
+                <p class="section-subtitle">James Author</p>
+              </div>
+            </div>
+            <div class="testimonial-box mySlides fade">
+              <div class="testimonial-image">
+                <img class="image" src="resources/testimonial-img1.jpg" alt="John">
+              </div>
+              <div>
+                <p class="section-text">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                  eros eros libero
+                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                  porta at
+                  vestibulum suspendisse.
+                </p>
+                <p class="section-subtitle">John Doe</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial-box mySlides fade">
+              <div class="testimonial-image">
+                <img class="image" src="resources/testimonial-img2.jpg" alt="John">
+              </div>
+              <div>
+                <p class="section-text">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                  eros eros libero
+                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                  porta at
+                  vestibulum suspendisse.
+                </p>
+                <p class="section-subtitle">John Doe</p>
+              </div>
+            </div>
+            <div class="testimonial-box mySlides fade">
+              <div class="testimonial-image">
+                <img class="image" src="resources/testimonial-img3.jpg" alt="John">
+              </div>
+              <div>
+                <p class="section-text">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                  eros eros libero
+                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                  porta at
+                  vestibulum suspendisse.
+                </p>
+                <p class="section-subtitle">John Doe</p>
+              </div>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <div class="testimonial-box">
+              <div class="testimonial-image">
+                <img class="image" src="resources/testimonial-img1.jpg" alt="John">
+              </div>
+              <div>
+                <p class="section-text">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                  eros eros libero
+                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                  porta at
+                  vestibulum suspendisse.
+                </p>
+                <p class="section-subtitle">John Doe</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="circles mobile">
-          <span class="dot point" onclick="currentSlide(1)"></span>
-          <span class="dot point" onclick="currentSlide(2)"></span>
-          <span class="dot point" onclick="currentSlide(3)"></span>
           <span class="dot point" onclick="currentSlide(4)"></span>
           <span class="dot point" onclick="currentSlide(5)"></span>
+          <span class="dot point" onclick="currentSlide(6)"></span>
+          <span class="dot point" onclick="currentSlide(7)"></span>
+          <span class="dot point" onclick="currentSlide(8)"></span>
         </div>
       </container>
     </section>
@@ -680,12 +763,7 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"
-    integrity="sha512-614k4+nIB+21iS2+QUeDh7T928egRNeNcjkKCdWPYmFCA3/mub3H6KoqIHAk8Pdm07S6uAPqWvXerPFVRYVB/Q=="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"
-    integrity="sha512-vWutwDjKJo+VMAA7IrS/ICTmVYXRMdqtXA27MSuPxGjkbYnKeUKPrIpfsAwIXCzaSDF/qRy/L85ko/yxW0AIiA=="
-    crossorigin="anonymous"></script>
+  <script src="node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
   <script defer src="resources/icomoon/svgxuse.js"></script>
   <script src="index.js"></script>
 </body>

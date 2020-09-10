@@ -6,19 +6,20 @@ $dark-text: rgba(24, 26, 26, 0.5);
 $dull-gray: rgba(31, 46, 45, 0.7);
 $white: rgb(255, 255, 255);
 $active-button-color: rgb(221, 150, 42);
-$border-active-button: 3px solid rgb(170, 120, 44);
-$header-border: 3px solid rgba(214, 214, 214, 0.1);
+$border-active-button: 0.2rem solid rgb(170, 120, 44);
+$dull-white: rgb(214, 214, 214);
+$header-border: 0.2rem solid transparentize($dull-white, 0.1);
 $active-section: rgba(45, 192, 168, 0.8);
-$section-even-bg: rgba(214, 214, 214, 0.2);
-$team-hover-color: rgba(255, 255, 255, 0.76);
-$icon-team-hover: rgba(0, 0, 0, 0.603);
-$portfolio-hover: rgba(104, 207, 185, 0.781);
-$blog-date: rgba(75, 75, 75, 0.4);
-$blog-border: 1px solid rgba(214, 214, 214, 0.4);
-$blog-main-color: rgba(58, 56, 56, 0.829);
-$dot-color: rgba(104, 207, 185, 0.596);
+$section-even-bg: transparentize($dull-white, 0.2);
+$team-hover-color: transparentize($white, 0.76);
 $black: rgb(0, 0, 0);
-$contact-us-borders: 2px solid rgba(214, 214, 214, 0.4);
+$icon-team-hover: transparentize($black, 0.603);
+$portfolio-hover: transparentize($principal-color, 0.781);
+$blog-date: rgba(75, 75, 75, 0.4);
+$blog-border: 0.05rem solid transparentize($dull-white, 0.4);
+$blog-main-color: rgba(58, 56, 56, 0.829);
+$dot-color: transparentize($principal-color, 0.596);
+$contact-us-borders: 0.1rem solid transparentize($dull-white, 0.4);
 $place-holder-color: rgba(121, 118, 118, 0.644);
 
 * {
@@ -61,13 +62,13 @@ body {
   }
 
   .main-text {
-    margin: 20px;
+    margin: 1.2rem;
     font-size: 1rem;
   }
 }
 
 .overview-buttons {
-  margin: 50px 0;
+  margin: 3rem 0;
   padding: 0;
   list-style: none;
   display: -webkit-flex;
@@ -75,7 +76,7 @@ body {
   justify-content: center;
 
   .link-ref {
-    padding: 10px 40px;
+    padding: 0.8rem 3rem;
     text-decoration: none;
     color: $white;
     font-weight: 700;
@@ -87,12 +88,12 @@ body {
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 0.2rem;
   font-weight: 700;
   margin: 0 1rem;
 }
 .learn {
-  border: 3px solid $white;
+  border: 0.2rem solid $white;
 }
 .contact {
   background-color: $principal-color;
@@ -159,7 +160,7 @@ body {
 
   .item {
     margin: 0 1.4rem;
-    border-radius: 5px;
+    border-radius: 0.2rem;
     font-weight: 700;
   }
 }
@@ -217,7 +218,7 @@ body {
   margin: 0.6rem 0;
 }
 
-#about {
+.about-section {
   padding: 8rem 9rem;
   width: 100vw;
 }
@@ -423,7 +424,7 @@ body {
 .container-grid-element-blog {
   border: $blog-border;
   margin: 0.9rem;
-  border-radius: 5px;
+  border-radius: 0.2rem;
 
   .container-content {
     margin: 3.5rem;
@@ -475,7 +476,7 @@ body {
 .question {
   margin: 1rem;
   background-color: $white;
-  border-radius: 5px;
+  border-radius: 0.2rem;
   padding: 1rem;
 
   .box-title {
@@ -575,7 +576,7 @@ body {
         width: 100%;
         background-color: transparent;
         border: $contact-us-borders;
-        border-radius: 5px;
+        border-radius: 0.2rem;
         padding: 0.8rem;
       }
       ::placeholder {
@@ -597,7 +598,7 @@ body {
   .contact-message {
     background-color: transparent;
     border: $contact-us-borders;
-    border-radius: 5px;
+    border-radius: 0.2rem;
     color: $place-holder-color;
     font-family: 'Oxygen', sans-serif;
     font-weight: 700;
@@ -715,7 +716,7 @@ body {
       margin: 0 1rem;
     }
   }
-  #about {
+  .about-section {
     padding: 6rem 4rem;
   }
   .section-container-about-video {
@@ -735,7 +736,7 @@ body {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
   }
-  #blog-grid {
+  .blog-grid {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
   }
@@ -787,7 +788,7 @@ body {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
   }
-  #about {
+  .about-section {
     padding: 4rem 2rem;
   }
   .section-container-about-video {
