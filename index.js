@@ -4,7 +4,9 @@ import 'svgxuse';
 
 let mobileNav = document.querySelector('.header-mobile');
 
-let slideIndex = 1;
+var slideIndex = 1;
+
+const maxWidth = window.matchMedia('(max-width: 576px)');
 
 let selectedQuestions = document.querySelectorAll('.question');
 
@@ -31,6 +33,17 @@ let headerSections = [
   '#blog-button',
   '#contact-button',
 ];
+
+function changeTestimonial(maxWidth) {
+  if (maxWidth.matches) {
+    // If media query matches
+    slideIndex = 4;
+    showSlides(slideIndex);
+  } else {
+    slideIndex = 1;
+    showSlides(slideIndex);
+  }
+}
 
 window.openMobileMenu = () => {
   let items = mobileNav.querySelector('.header-items');
@@ -83,6 +96,9 @@ function closeAll() {
 }
 // Testimonial Slider
 
+changeTestimonial(maxWidth);
+maxWidth.addListener(changeTestimonial);
+
 showSlides(slideIndex);
 
 // build scenes
@@ -91,3 +107,5 @@ sections.forEach(function (element, index) {
     .setClassToggle(headerSections[index], 'active-header') // add class toggle
     .addTo(controller);
 });
+
+maxWidth.removeListener();

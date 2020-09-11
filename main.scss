@@ -169,7 +169,15 @@ body {
 }
 .header-mobile {
   display: none;
+  overflow: hidden;
+  max-width: 5rem;
 }
+
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
 .open-parent {
   display: block;
   position: -webkit-sticky;
@@ -198,6 +206,7 @@ body {
 
 .toggle-button {
   width: 3rem;
+  margin: 0 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -310,6 +319,7 @@ body {
   position: relative;
   .image {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -331,11 +341,12 @@ body {
     color: $icon-team-hover;
   }
   .be {
-    padding: 0.3rem;
+    padding: 0.6rem 0.2rem 0.2rem 0.6rem;
     background: $icon-team-hover;
   }
   .behance-use {
     color: $team-hover-color;
+    transform: scale(0.7);
   }
   opacity: 0;
 }
@@ -357,12 +368,13 @@ body {
 }
 
 .container-grid-image-container {
-  width: 90%;
+  width: 95%;
   max-width: 50rem;
   margin: 0.7rem;
   position: relative;
   .image {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -638,11 +650,12 @@ body {
     color: $black;
   }
   .be {
-    padding: 0.3rem;
+    padding: 0.6rem 0.2rem 0.2rem 0.6rem;
     background: $black;
   }
   .behance-use {
     color: $white;
+    transform: scale(0.7);
   }
 }
 
@@ -729,8 +742,14 @@ body {
   .section-design-center {
     padding: 6rem 2rem 4rem 2rem;
   }
+  .section-container-team {
+    justify-content: left;
+  }
   .container-grid-element-team {
     width: 40%;
+  }
+  .tab-left {
+    margin: 2rem;
   }
   .images-grid {
     grid-template-columns: auto auto;
@@ -747,6 +766,9 @@ body {
     .contact-message {
       width: 100%;
     }
+  }
+  .shoot-message-button {
+    width: 60%;
   }
 }
 
@@ -781,7 +803,7 @@ body {
     padding: 0;
 
     .mobile-header-section {
-      margin: 2rem;
+      margin: 0.5rem 2rem;
     }
   }
   .section-container-grid {
@@ -812,6 +834,9 @@ body {
     .message-div {
       margin: 0 0 2rem 0;
     }
+  }
+  .shoot-message-button {
+    width: 70%;
   }
   .mobile {
     display: flex;

@@ -66,38 +66,40 @@
     <div class="mobile-header-section">
       <h1 class="header-title">Talos</h1>
     </div>
-    <button class="toggle-button mobile-header-section" onclick="openMobileMenu()">
+    <button class="toggle-button" onclick="openMobileMenu()">
       <span class="toggle-button-bar"></span>
       <span class="toggle-button-bar"></span>
       <span class="toggle-button-bar"></span>
     </button>
   </nav>
   <main>
-    <nav class="header-mobile">
-      <ul class="header-items">
-        <li class="item" id="home-button">
-          <a class="link-ref" href="#home">HOME</a>
-        </li>
-        <li class="item" id="about-button">
-          <a class="link-ref" href="#about">SERVICES</a>
-        </li>
-        <li class="item" id="about-video-button">
-          <a class="link-ref" href="#about-video">ABOUT</a>
-        </li>
-        <li class="item" id="team-button">
-          <a class="link-ref" href="#team">TEAM</a>
-        </li>
-        <li class="item" id="portfolio-button">
-          <a class="link-ref" href="#portfolio">PORTFOLIO</a>
-        </li>
-        <li class="item" id="blog-button">
-          <a class="link-ref" href="#blog">BLOG</a>
-        </li>
-        <li class="item" id="contact-button">
-          <a class="link-ref" href="#contact">CONTACT</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <nav class="header-mobile">
+        <ul class="header-items">
+          <li class="item" id="home-button">
+            <a class="link-ref" href="#home">HOME</a>
+          </li>
+          <li class="item" id="about-button">
+            <a class="link-ref" href="#about">SERVICES</a>
+          </li>
+          <li class="item" id="about-video-button">
+            <a class="link-ref" href="#about-video">ABOUT</a>
+          </li>
+          <li class="item" id="team-button">
+            <a class="link-ref" href="#team">TEAM</a>
+          </li>
+          <li class="item" id="portfolio-button">
+            <a class="link-ref" href="#portfolio">PORTFOLIO</a>
+          </li>
+          <li class="item" id="blog-button">
+            <a class="link-ref" href="#blog">BLOG</a>
+          </li>
+          <li class="item" id="contact-button">
+            <a class="link-ref" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <section id="about" class="about-section">
       <h1 class="section-title">What we do</h1>
       <p class="section-text">Lorem ipsum dolor sit amet consectetur, adipisecing elit primis mauris.</p>
@@ -259,7 +261,7 @@
           <h2 class="section-subtitle">Jenny L Martian</h2>
           <h3 class="subtitle-description">UX Designer</h3>
         </div>
-        <div class="container-grid-element-team">
+        <div class="container-grid-element-team tab-left">
           <div class="team-image-container">
             <img class="image" src="resources/team_3.jpg" alt="James">
             <div class="team-image-container social">
@@ -600,87 +602,87 @@
           <span class="dot point" onclick="currentSlide(3)"></span>
         </div>
         <div class="testimonial-boxes mobile">
-          <div>
-            <div class="testimonial-box mySlides fade">
-              <div class="testimonial-image">
-                <img class="image" src="resources/testimonial-img3.jpg" alt="james">
-              </div>
-              <div>
-                <p class="section-text">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
-                  eros eros libero
-                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
-                  porta at
-                  vestibulum suspendisse.
-                </p>
-                <p class="section-subtitle">James Author</p>
-              </div>
+
+          <div class="testimonial-box mySlides fade slide-visible">
+            <div class="testimonial-image">
+              <img class="image" src="resources/testimonial-img3.jpg" alt="james">
             </div>
-            <div class="testimonial-box mySlides fade">
-              <div class="testimonial-image">
-                <img class="image" src="resources/testimonial-img1.jpg" alt="John">
-              </div>
-              <div>
-                <p class="section-text">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
-                  eros eros libero
-                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
-                  porta at
-                  vestibulum suspendisse.
-                </p>
-                <p class="section-subtitle">John Doe</p>
-              </div>
+            <div>
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                eros eros libero
+                ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                porta at
+                vestibulum suspendisse.
+              </p>
+              <p class="section-subtitle">James Author</p>
             </div>
           </div>
-          <div>
-            <div class="testimonial-box mySlides fade">
-              <div class="testimonial-image">
-                <img class="image" src="resources/testimonial-img2.jpg" alt="John">
-              </div>
-              <div>
-                <p class="section-text">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
-                  eros eros libero
-                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
-                  porta at
-                  vestibulum suspendisse.
-                </p>
-                <p class="section-subtitle">John Doe</p>
-              </div>
+          <div class="testimonial-box mySlides fade">
+            <div class="testimonial-image">
+              <img class="image" src="resources/testimonial-img1.jpg" alt="John">
             </div>
-            <div class="testimonial-box mySlides fade">
-              <div class="testimonial-image">
-                <img class="image" src="resources/testimonial-img3.jpg" alt="John">
-              </div>
-              <div>
-                <p class="section-text">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
-                  eros eros libero
-                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
-                  porta at
-                  vestibulum suspendisse.
-                </p>
-                <p class="section-subtitle">John Doe</p>
-              </div>
+            <div>
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                eros eros libero
+                ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                porta at
+                vestibulum suspendisse.
+              </p>
+              <p class="section-subtitle">John Doe</p>
             </div>
           </div>
-          <div class="mySlides fade">
-            <div class="testimonial-box">
-              <div class="testimonial-image">
-                <img class="image" src="resources/testimonial-img1.jpg" alt="John">
-              </div>
-              <div>
-                <p class="section-text">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
-                  eros eros libero
-                  ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
-                  porta at
-                  vestibulum suspendisse.
-                </p>
-                <p class="section-subtitle">John Doe</p>
-              </div>
+
+
+          <div class="testimonial-box mySlides fade">
+            <div class="testimonial-image">
+              <img class="image" src="resources/testimonial-img2.jpg" alt="John">
+            </div>
+            <div>
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                eros eros libero
+                ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                porta at
+                vestibulum suspendisse.
+              </p>
+              <p class="section-subtitle">John Doe</p>
             </div>
           </div>
+          <div class="testimonial-box mySlides fade">
+            <div class="testimonial-image">
+              <img class="image" src="resources/testimonial-img3.jpg" alt="John">
+            </div>
+            <div>
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                eros eros libero
+                ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                porta at
+                vestibulum suspendisse.
+              </p>
+              <p class="section-subtitle">John Doe</p>
+            </div>
+          </div>
+
+
+          <div class="testimonial-box mySlides fade">
+            <div class="testimonial-image">
+              <img class="image" src="resources/testimonial-img1.jpg" alt="John">
+            </div>
+            <div>
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos,
+                eros eros libero
+                ad himenaeos turpis pharetra phasellus convallis quisque, mattis parturient sodales
+                porta at
+                vestibulum suspendisse.
+              </p>
+              <p class="section-subtitle">John Doe</p>
+            </div>
+          </div>
+
         </div>
         <div class="circles mobile">
           <span class="dot point" onclick="currentSlide(4)"></span>
