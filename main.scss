@@ -8,18 +8,18 @@ $white: rgb(255, 255, 255);
 $active-button-color: rgb(221, 150, 42);
 $border-active-button: 0.2rem solid rgb(170, 120, 44);
 $dull-white: rgb(214, 214, 214);
-$header-border: 0.2rem solid transparentize($dull-white, 0.1);
+$header-border: 0.2rem solid transparentize($dull-white, 0.9);
 $active-section: rgba(45, 192, 168, 0.8);
-$section-even-bg: transparentize($dull-white, 0.2);
-$team-hover-color: transparentize($white, 0.76);
+$section-even-bg: transparentize($dull-white, 0.8);
+$team-hover-color: transparentize($white, 0.24);
 $black: rgb(0, 0, 0);
-$icon-team-hover: transparentize($black, 0.603);
-$portfolio-hover: transparentize($principal-color, 0.781);
+$icon-team-hover: transparentize($black, 0.4);
+$portfolio-hover: transparentize($principal-color, 0.2);
 $blog-date: rgba(75, 75, 75, 0.4);
-$blog-border: 0.05rem solid transparentize($dull-white, 0.4);
+$blog-border: 0.05rem solid transparentize($dull-white, 0.6);
 $blog-main-color: rgba(58, 56, 56, 0.829);
-$dot-color: transparentize($principal-color, 0.596);
-$contact-us-borders: 0.1rem solid transparentize($dull-white, 0.4);
+$dot-color: transparentize($principal-color, 0.4);
+$contact-us-borders: 0.1rem solid transparentize($dull-white, 0.6);
 $place-holder-color: rgba(121, 118, 118, 0.644);
 
 * {
