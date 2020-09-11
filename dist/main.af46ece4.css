@@ -98,7 +98,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 0.2rem solid rgba(214, 214, 214, 0.1);
+  border: 0.2rem solid rgba(214, 214, 214, 0.9);
   margin: 0;
   background-color: white; }
 
@@ -125,7 +125,13 @@ body {
   display: none; }
 
 .header-mobile {
-  display: none; }
+  display: none;
+  overflow: hidden;
+  max-width: 5rem; }
+
+.header-container {
+  display: flex;
+  justify-content: center; }
 
 .open-parent {
   display: block;
@@ -150,6 +156,7 @@ body {
 
 .toggle-button {
   width: 3rem;
+  margin: 0 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -167,7 +174,7 @@ body {
   display: block;
   margin: 0.6rem 0; }
 
-#about {
+.about-section {
   padding: 8rem 9rem;
   width: 100vw; }
 
@@ -208,7 +215,7 @@ body {
   margin: 0.04rem 0; }
 
 .section-even {
-  background-color: rgba(214, 214, 214, 0.2);
+  background-color: rgba(214, 214, 214, 0.8);
   width: 100vw; }
 
 .section-container-about-video {
@@ -243,11 +250,12 @@ body {
   max-width: 50rem;
   position: relative; }
   .team-image-container .image {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
 
 .social {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.76);
+  background-color: rgba(255, 255, 255, 0.24);
   width: 100%;
   margin: 0;
   bottom: 0;
@@ -261,12 +269,13 @@ body {
     margin: 0.5rem;
     width: 2.5rem;
     height: 2.5rem;
-    color: rgba(0, 0, 0, 0.603); }
+    color: rgba(0, 0, 0, 0.397); }
   .social .be {
-    padding: 0.3rem;
-    background: rgba(0, 0, 0, 0.603); }
+    padding: 0.6rem 0.2rem 0.2rem 0.6rem;
+    background: rgba(0, 0, 0, 0.397); }
   .social .behance-use {
-    color: rgba(255, 255, 255, 0.76); }
+    color: rgba(255, 255, 255, 0.24);
+    transform: scale(0.7); }
 
 .team-image-container:hover .social {
   opacity: 1; }
@@ -281,16 +290,17 @@ body {
   grid-template-rows: auto auto auto; }
 
 .container-grid-image-container {
-  width: 90%;
+  width: 95%;
   max-width: 50rem;
   margin: 0.7rem;
   position: relative; }
   .container-grid-image-container .image {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
 
 .link {
   position: absolute;
-  background-color: rgba(104, 207, 185, 0.781);
+  background-color: rgba(104, 207, 185, 0.219);
   width: 100%;
   height: 100%;
   margin: 0;
@@ -319,7 +329,7 @@ body {
     align-items: center;
     margin: 2rem; }
     .link .chain .icon-svg {
-      color: rgba(104, 207, 185, 0.781);
+      color: rgba(104, 207, 185, 0.219);
       font-size: 2rem; }
   .link .chain:hover {
     cursor: pointer; }
@@ -331,7 +341,7 @@ body {
   transition: opacity 0.2s linear 0.1s; }
 
 .container-grid-element-blog {
-  border: 0.05rem solid rgba(214, 214, 214, 0.4);
+  border: 0.05rem solid rgba(214, 214, 214, 0.6);
   margin: 0.9rem;
   border-radius: 0.2rem; }
   .container-grid-element-blog .container-content {
@@ -426,7 +436,7 @@ body {
   height: 0.7rem;
   margin: 0 0.9rem 0 0;
   border-radius: 50%;
-  background: rgba(104, 207, 185, 0.596);
+  background: rgba(104, 207, 185, 0.404);
   transition: background-color 0.6s ease; }
 
 .active,
@@ -452,7 +462,7 @@ body {
       .contact-container .info-div .info-input .input-text {
         width: 100%;
         background-color: transparent;
-        border: 0.1rem solid rgba(214, 214, 214, 0.4);
+        border: 0.1rem solid rgba(214, 214, 214, 0.6);
         border-radius: 0.2rem;
         padding: 0.8rem; }
       .contact-container .info-div .info-input ::placeholder {
@@ -469,7 +479,7 @@ body {
   margin: 1.3rem 0 1.3rem 2rem; }
   .message-div .contact-message {
     background-color: transparent;
-    border: 0.1rem solid rgba(214, 214, 214, 0.4);
+    border: 0.1rem solid rgba(214, 214, 214, 0.6);
     border-radius: 0.2rem;
     color: rgba(121, 118, 118, 0.644);
     font-family: 'Oxygen', sans-serif;
@@ -504,10 +514,11 @@ body {
     height: 2.5rem;
     color: black; }
   .iconred .be {
-    padding: 0.3rem;
+    padding: 0.6rem 0.2rem 0.2rem 0.6rem;
     background: black; }
   .iconred .behance-use {
-    color: white; }
+    color: white;
+    transform: scale(0.7); }
 
 .slide-ocult {
   display: none; }
@@ -555,7 +566,7 @@ body {
   .header-items .item {
     margin: 0 1rem; }
 
-  #about {
+  .about-section {
     padding: 6rem 4rem; }
 
   .section-container-about-video {
@@ -567,14 +578,20 @@ body {
   .section-design-center {
     padding: 6rem 2rem 4rem 2rem; }
 
+  .section-container-team {
+    justify-content: left; }
+
   .container-grid-element-team {
     width: 40%; }
+
+  .tab-left {
+    margin: 2rem; }
 
   .images-grid {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto; }
 
-  #blog-grid {
+  .blog-grid {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto; }
 
@@ -582,7 +599,10 @@ body {
     margin: 5rem 0; }
 
   .message-div .contact-message {
-    width: 100%; } }
+    width: 100%; }
+
+  .shoot-message-button {
+    width: 60%; } }
 @media screen and (max-width: 576px) {
   body {
     margin: 0;
@@ -607,13 +627,20 @@ body {
     display: flex;
     padding: 0; }
     .mobile-header-view .mobile-header-section {
-      margin: 2rem; }
+      margin: 0.5rem 2rem; }
+
+  .header-items {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0; }
 
   .section-container-grid {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto; }
 
-  #about {
+  .about-section {
     padding: 4rem 2rem; }
 
   .section-container-about-video {
@@ -635,6 +662,9 @@ body {
       width: 100%; }
     .contact-container .message-div {
       margin: 0 0 2rem 0; }
+
+  .shoot-message-button {
+    width: 70%; }
 
   .mobile {
     display: flex; } }
